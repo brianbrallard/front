@@ -5,13 +5,13 @@
 .container{
     display: flex;
     background-color: #1C1C1C;
-    min-height: 100vh;
+    height: 100vh;
     
 }
 .box{
     margin: auto;
-    width: 60rem;
-    height: 50rem; 
+    width: 90vh;
+    height: 90vh; 
     
     background-color: #1F2937;
     
@@ -29,6 +29,7 @@ p{
     font-size: 4rem;
 }
 .password{
+    
     font-size: 4rem;
     color: #4ADF86;
 }
@@ -56,14 +57,19 @@ fieldset {
   }
   
 .passwords{
+
     color: #4ADF86;
     display: inline-block;
     margin: 1rem;
     text-align: center;
-    align-items: center;
+    
 }
 .pass1{
-    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-wrap: break-word;
+    overflow: hidden;
     width: 18rem;
     height: 3rem;
     background-color: #273549;
@@ -72,16 +78,21 @@ fieldset {
     
 }
 .pass2{
-    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-wrap: break-word;
+    overflow: hidden;
     width: 18rem;
     height: 3rem;
     background-color: #273549;
     margin: 1rem 2rem;
     border-radius: 0.5rem;
-    padding: 0;
+    
 
 }
 @media only screen and (min-width: 600px) {
+    
     .parrafos{
         margin-left: 6rem;
         margin-top: 11rem;
@@ -96,13 +107,18 @@ fieldset {
     }
 
 }
-@media only screen and (max-width: 600px) {
-   .parrafos{
-    margin-left: 3rem;
-    margin-top: 5rem;
-    margin-bottom: auto;
+@media only screen and (max-width: 700px) {
+   html,body{
+   height: 100vh;
+   overflow-y: hidden;
+   }
+   
+    .parrafos{
+    margin-left: 2.5rem;
+    margin-top: 3rem;
+    
    }
     .box{
-    height: auto;
+    height: 100vh;
    }
 }
