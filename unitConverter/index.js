@@ -17,6 +17,7 @@ botonEl.addEventListener('click', ()=>{
         kilos = ${((inputEl.value)*2.204).toFixed(3)} 
         | ${inputEl.value} libras = ${((inputEl.value)/2.204).toFixed(3)} 
         kilos`
+    inputEl.value=''
 })
 /*
 1 meter = 3.281 feet
