@@ -4,18 +4,18 @@ valoresEl = document.getElementById('valores')
 
 botonEl.addEventListener('click', ()=>{
     valor1.innerHTML = `${inputEl.value} 
-        metros = ${((inputEl.value)*3.281).toFixed(3)} 
+        metro/s = ${((inputEl.value)*3.281).toFixed(3)} pies
         | ${inputEl.value} pies = ${((inputEl.value)/3.281).toFixed(3)} 
         metros`
 
     valor2.innerHTML = `${inputEl.value} 
-        litros = ${((inputEl.value)*0.264).toFixed(3)} 
+        litro/s = ${((inputEl.value)*0.264).toFixed(3)} galones
         | ${inputEl.value} galones = ${((inputEl.value)/0.264).toFixed(3)} 
         litros`
 
     valor3.innerHTML = `${inputEl.value} 
-        kilos = ${((inputEl.value)*2.204).toFixed(3)} 
-        | ${inputEl.value} libras = ${((inputEl.value)/2.204).toFixed(3)} 
+        kilo/s = ${((inputEl.value)*2.204).toFixed(3)} libras
+        | ${inputEl.value} libra/s = ${((inputEl.value)/2.204).toFixed(3)} 
         kilos`
     inputEl.value=''
 })
