@@ -1,0 +1,31 @@
+/*
+Palette: https://scrimba.com/links/hometown-palette
+RED: #E63946
+LIGHT: #F1FAEE
+AQUA: #A8DADC
+LIGHT BLUE: #457B9D
+DARK BLUE: #1D3557
+
+*/
+
+body {
+    margin: 0;
+    text-align: center;
+}
+.hero{
+    height: 350px;
+    background-image: url(images/cordoba-ciudad.webp);
+    background-size: cover;
+    background-position-y: center;
+    display: flex;
+    flex-direction: column;
+   
+}
+#message-title,#title{ 
+    align-self: center;
+    background: rgba(255, 235, 205, 0.432);
+    padding: 5px;
+}
+img {
+    width: 100px;
+}
