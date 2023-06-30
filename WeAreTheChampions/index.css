@@ -11,7 +11,7 @@ html, body {
     display: flex;
     flex-direction: column;
     max-width: 320px;
-    margin: 30px auto;
+    margin: 40px auto;
 }
 img{
     width: 5.625rem;
@@ -46,7 +46,7 @@ textarea{
 }
 .fromTo{
     display: flex;
-    flex-grow: 1;
+   
     gap: 10px;
     margin-bottom: 10px;
     
