@@ -52,7 +52,7 @@ textarea{
    
     gap: 10px;
     margin-bottom: 10px;
-    width: 21rem;
+    width: 20.9em;
     
     
 }
@@ -70,7 +70,7 @@ button {
     color: #04131C;
     background-color: #B9F18C;
     border: 0;
-    width: 21rem;
+    width: 20.9rem;
     height: 3rem;
     border-radius: 8px;
     font-size: 1.375rem;
@@ -148,4 +148,12 @@ ul li {
     color: red;
     cursor: pointer;
     
+}
+@media (max-width: 400px) {
+    /* Estilos específicos para dispositivos con un ancho máximo de 480px (por ejemplo, smartphones) */
+    body {
+        /* Aplica estilos para centrar en dispositivos móviles */
+        margin-left: auto;
+        margin-right:16px;
+    }
 }
