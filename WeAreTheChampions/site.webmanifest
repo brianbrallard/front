@@ -1,6 +1,6 @@
 {
-    "name": "soloProjectBrian",
-    "short_name": "",
+    "name": "SoloProject",
+    "short_name": "SoloProject",
     "icons": [
         {
             "src": "android-chrome-192x192.png",
