@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     font-family: 'Rubik', sans-serif;
@@ -14,24 +15,26 @@ html, body {
     max-width: 320px;
     margin: 0 auto;
 }
-img{
+
+img {
     width: 5.625rem;
     height: 5.625rem;
     margin: 0 auto;
 }
-h1{
+
+h1 {
     text-align: center;
     color: #FFF;
     font-size: 1.5625rem;
     font-family: Josefin Sans;
     font-weight: 700;
     line-height: normal;
-    margin-top:25px;
+    margin-top: 25px;
     margin-bottom: 10px;
 }
 
-textarea{
-    color:#8F8F8F;
+textarea {
+    color: #8F8F8F;
     background-color: #444059;
     resize: none;
     width: 19rem;
@@ -40,23 +43,26 @@ textarea{
     padding: 15px;
     border-radius: 8px;
     color: #8F8F8F;
-    font-size:1rem;
+    font-size: 1rem;
     font-family: Inter;
     margin: 10px 0;
-    
-    
-    
+
+
+
 }
-.fromTo{
+
+.fromTo {
     display: flex;
-   
+
     gap: 10px;
     margin-bottom: 10px;
     width: 20.9em;
-    
-    
+
+
 }
-.from, .to{
+
+.from,
+.to {
 
     padding: 10px 0px;
     text-align: center;
@@ -78,14 +84,16 @@ button {
     font-family: 'Belanosima', sans-serif;
     font-weight: 700;
     line-height: normal;
-    &:hover{
-        background-color:#DCEED1;
-        cursor:pointer;
 
-        
+    &:hover {
+        background-color: #DCEED1;
+        cursor: pointer;
+
+
     }
 }
-p{
+
+p {
     color: #DCEED1;
 }
 
@@ -97,7 +105,7 @@ ul {
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    
+
 }
 
 ul li {
@@ -109,14 +117,16 @@ ul li {
     flex-grow: 1;
     border-radius: 5px;
     box-shadow: 0px 1px 4px rgba(1, 1, 1, 0.8);
-    &:hover{
+
+    &:hover {
         background-color: #1C0221;
         color: #ffffff;
-        
+
     }
-    
+
 }
-.comment{
+
+.comment {
     color: rgb(153, 151, 151);
 }
 
@@ -127,7 +137,7 @@ ul li {
     margin-bottom: 12px;
     margin-top: 10px;
 }
-  
+
 .comment-from {
     font-family: Arial, sans-serif;
     font-weight: bold;
@@ -136,24 +146,29 @@ ul li {
     margin-right: 10px;
 
 }
+
 .action-container {
     display: flex;
     justify-content: space-between;
 }
-.like-wrapper{
-    align-self:flex-end ;
+
+.like-wrapper {
+    align-self: flex-end;
 }
-.fa-heart{
+
+.fa-heart {
     margin-right: 5px;
     color: red;
     cursor: pointer;
-    
+
 }
+
 @media (max-width: 400px) {
+
     /* Estilos específicos para dispositivos con un ancho máximo de 480px (por ejemplo, smartphones) */
     body {
         /* Aplica estilos para centrar en dispositivos móviles */
         margin-left: auto;
-        margin-right:16px;
+        margin-right: 16px;
     }
 }
