@@ -1,5 +1,133 @@
 html, body {
     margin: 0;
     padding: 0;
+    background-color: #EDEDED;
+}
+header{
+    display: flex;
+    justify-content:space-between;
+    padding: 10px 20px 10px 12px ;
+    background-color: #FFFFFF;
+    
+}
+
+.logo{
+    width: 127px;
+
+}
+.avatar{
+    width: 34px;
+    height:34px;
+    align-self: center;
+    border-radius: 50%;
+}
+section{
+    margin-top: 3px;
+    background: #FFFFFF;
+}
+.box{
+    display: flex;
+    margin-left: 10px;
+    padding: 12px 0px;
+}
+.box .avatar {
+    margin-right: 8px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+}
+.box h3{
+    font-size: 13px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 700;
+}
+.box p{
+    font-size: 12px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+}
+.box h3, .box p {
+    margin: 0;
+}
+
+.imglike{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imglike svg{
+    position: absolute;
+    width: 64px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.imglike svg.like{
+    animation: 1s like ease-in-out;
+    
+}
+
+@keyframes like {
+    0% {
+        opacity: 0;
+        scale: 0;
+    }
+    15% {
+        opacity: 1;
+        scale: 1.2;
+    }
+    30% {
+        scale: .95;
+    }
+    45%,
+    80% {
+        scale: 1;
+    }
+    100% {
+        scale: 0;
+        opacity: 1;
+    }
+}
+
+
+
+
+.post-vangogh{
+    width: 100%;
+}
+.icons{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 8px 0px;
+    width: 132px;
+}
+.icons img{
+    width: 32px;
+   
+}
+h3{
+    font-size: 13px;
+    font-family: 'Source Sans 3', sans-serif;
+
+}
+.desc{
+  
+    margin-left: 10px;
+
+}
+.desc p{
+    font-size: 12px;
+    font-family: 'Source Sans 3', sans-serif;
+    padding-bottom: 12px;
+
+}
+p span{
+    font-weight: bold;
+    font-size: 13px;
+    font-family: 'Source Sans 3', sans-serif;
+
 }
 

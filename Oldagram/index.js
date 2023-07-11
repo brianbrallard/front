@@ -28,3 +28,13 @@ const posts = [
     }
 ]
 
+const img = document.getElementById('vangogh')
+const icon = document.querySelector('svg')
+
+img.addEventListener('dblclick',()=>{
+    icon.classList.add('like')
+
+    setTimeout(() => {
+        icon.classList.remove('like')
+    }, 1000);
+})
