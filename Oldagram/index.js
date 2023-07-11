@@ -38,3 +38,6 @@ img.addEventListener('dblclick',()=>{
         icon.classList.remove('like')
     }, 1000);
 })
+
+
+
