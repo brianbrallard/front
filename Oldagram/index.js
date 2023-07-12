@@ -28,24 +28,27 @@ const posts = [
     }
 ]
 
-const img = document.getElementById('vangogh')
-     const icon = document.querySelector('svg')
-     
-     img.addEventListener('dblclick',()=>{
-         icon.classList.add('like')
-     
-         setTimeout(() => {
-             icon.classList.remove('like')
-         }, 1000);
-     })
 
 // /* SOLUTION */
- const mainEl = document.querySelector("main")
+const mainEl = document.querySelector("main");
+
+mainEl.addEventListener("dblclick", (e) => {
+  const target = e.target;
+  if (target.classList.contains("post")) {
+    const icon = target.parentNode.querySelector(".imgLike svg")
+    icon.classList.add("like");
+
+    setTimeout(() => {
+      icon.classList.remove("like");
+    }, 1000);
+    
+  }
+});
  let html = ""
  for (let i = 0; i < posts.length; i++) {
     
      html += `
-         <main>
+         
          <article class="box">
         <img src="${posts[i].avatar}" class='avatar' alt="vangogh avatar">
 
@@ -55,7 +58,7 @@ const img = document.getElementById('vangogh')
          </div>
      </article>
      <div class="imglike">
-         <img class="post" id='vangogh' src="${posts[i].post}" alt="image">
+         <img class="post" id='post-${i}' src="${posts[i].post}" alt="image">
          <svg xmlns="http://www.w3.org/2000/svg" aria-label="Me gusta" fill="white" role="img" viewBox="0 0 24 24">
                 <title>Me gusta</title>
                 <path
@@ -71,7 +74,7 @@ const img = document.getElementById('vangogh')
          <h3>${posts[i].likes}</h3>
          <p><span>${posts[i].username} </span>${posts[i].comment}</p>
      </div>
- </main>
+ 
  
      `
      
