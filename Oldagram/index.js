@@ -29,15 +29,53 @@ const posts = [
 ]
 
 const img = document.getElementById('vangogh')
-const icon = document.querySelector('svg')
+     const icon = document.querySelector('svg')
+     
+     img.addEventListener('dblclick',()=>{
+         icon.classList.add('like')
+     
+         setTimeout(() => {
+             icon.classList.remove('like')
+         }, 1000);
+     })
 
-img.addEventListener('dblclick',()=>{
-    icon.classList.add('like')
+// /* SOLUTION */
+ const mainEl = document.querySelector("main")
+ let html = ""
+ for (let i = 0; i < posts.length; i++) {
+    
+     html += `
+         <main>
+         <article class="box">
+        <img src="${posts[i].avatar}" class='avatar' alt="vangogh avatar">
 
-    setTimeout(() => {
-        icon.classList.remove('like')
-    }, 1000);
-})
+         <div class="text-container">
+             <h3>${posts[i].name}</h3>
+             <p>${posts[i].location}</p>
+         </div>
+     </article>
+     <div class="imglike">
+         <img class="post" id='vangogh' src="${posts[i].post}" alt="image">
+         <svg xmlns="http://www.w3.org/2000/svg" aria-label="Me gusta" fill="white" role="img" viewBox="0 0 24 24">
+                <title>Me gusta</title>
+                <path
+                    d="M12 21.35l-1.984-1.802C4.017 14.47 0 11.378 0 7.5 0 3.358 3.358 0 7.5 0 9.577 0 11.54.975 12 2.502c.46-1.527 2.423-2.502 4.5-2.502 4.142 0 7.5 3.358 7.5 7.5 0 3.878-4.017 6.97-10.016 12.048L12 21.35z" />
+            </svg>
+     </div>
+     <div class="icons">
+         <img class="heart" src="images/icon-heart.png" alt="like button">
+         <img class="comment" src="images/icon-comment.png" alt="comment button">
+         <img src="images/icon-dm.png" alt="dm button">
+     </div>
+     <div class="desc">
+         <h3>${posts[i].likes}</h3>
+         <p><span>${posts[i].username} </span>${posts[i].comment}</p>
+     </div>
+ </main>
+ 
+     `
+     
+ }
 
-
+ mainEl.innerHTML = html;
 
