@@ -17,7 +17,7 @@ const posts = [
         comment: "i'm feelin a bit stressed tbh",
         likes: 4
     },
-        {
+    {
         name: "Joseph Ducreux",
         username: "jd1735",
         location: "Paris, France",
@@ -29,27 +29,28 @@ const posts = [
 ]
 
 
-// /* SOLUTION */
+
 const mainEl = document.querySelector("main");
 
 mainEl.addEventListener("dblclick", (e) => {
-  const target = e.target;
-  if (target.classList.contains("post")) {
-    const icon = target.parentNode.querySelector(".imgLike svg")
-    icon.classList.add("like");
+    const target = e.target;
+    if (target.classList.contains("post")) {
+        const icon = target.parentNode.querySelector(".imgLike svg")
+        icon.classList.add("like");
 
-    setTimeout(() => {
-      icon.classList.remove("like");
-    }, 1000);
-    
-  }
+        setTimeout(() => {
+            icon.classList.remove("like");
+        }, 1000);
+        
+    }
 });
- let html = ""
- for (let i = 0; i < posts.length; i++) {
-    
-     html += `
+
+let html = ""
+for (let i = 0; i < posts.length; i++) {
+    const likeClass = posts[i].liked ? "liked" : "";
+    html += `
          
-         <article class="box">
+         <article class="box" >
         <img src="${posts[i].avatar}" class='avatar' alt="vangogh avatar">
 
          <div class="text-container">
@@ -66,19 +67,33 @@ mainEl.addEventListener("dblclick", (e) => {
             </svg>
      </div>
      <div class="icons">
-         <img class="heart" src="images/icon-heart.png" alt="like button">
+         <img class="heart" id="heart" src="images/icon-heart.png" alt="like button">
          <img class="comment" src="images/icon-comment.png" alt="comment button">
          <img src="images/icon-dm.png" alt="dm button">
      </div>
-     <div class="desc">
-         <h3>${posts[i].likes}</h3>
+     <div class="desc" id="desc-${i}">
+         <h3>${posts[i].likes} likes</h3>
          <p><span>${posts[i].username} </span>${posts[i].comment}</p>
      </div>
- 
- 
      `
-     
- }
+}
 
- mainEl.innerHTML = html;
+mainEl.innerHTML = html;
 
+const heartButtons = document.querySelectorAll(".heart");
+heartButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+        posts[index].likes++;
+        const likesEl = mainEl.querySelector(`#desc-${index} h3`);
+        likesEl.textContent = `${posts[index].likes} likes`;
+    });
+});
+
+const postLikes = document.querySelectorAll(".post");
+postLikes.forEach((button, index) => {
+    button.addEventListener("dblclick", () => {
+        posts[index].likes+=1;
+        const likesEl = mainEl.querySelector(`#desc-${index} h3`);
+        likesEl.textContent = `${posts[index].likes} likes`;
+    });
+});

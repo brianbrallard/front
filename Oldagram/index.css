@@ -6,7 +6,7 @@ html, body {
 header{
     display: flex;
     justify-content:space-between;
-    padding: 10px 20px 10px 12px ;
+    padding: 6px 20px 6px 12px ;
     background-color: #FFFFFF;
     
 }
@@ -130,4 +130,6 @@ p span{
     font-family: 'Source Sans 3', sans-serif;
 
 }
-
+.heart{
+    fill: red;
+  }
