@@ -130,6 +130,7 @@ p span{
     font-family: 'Source Sans 3', sans-serif;
 
 }
-.heart{
-    fill: red;
-  }
+.heart.active{
+    content: url('images/icon-heart-filled.png');
+}
+
